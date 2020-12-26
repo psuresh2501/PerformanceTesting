@@ -1,0 +1,28 @@
+--------------------------------------------------------------------
+When in the bin folder
+To just run the jmx file from CLI
+==> jmeter -n -t <filename.jmx>
+--------------------------------------------------------------------
+To run the jmx file and store the results when in the bin folder
+==> jmeter -n -t <filename.jmx> -l <TestResult.csv>
+--------------------------------------------------------------------
+To run the jmx file and store the results in csv file and generate the HTML report
+==> jmeter -n -t <filename.jmx> -l <TestResult.csv> -e -o <oututfolder>
+--------------------------------------------------------------------
+To change the thread count from command line
+
+==> jmeter -Jthreads=50 -n -t <filename.jmx> -l <TestResult.csv> -e -o <html file dir.html>
+--------------------------------------------------------------------
+To change the thread group count, loop and rampup time in CLI
+${__P(threads, 100)}
+${__P(loops, 2)}
+${__P(duration, 60)}
+--------------------------------------------------------------------
+
+Starting Jenkins
+Java -jar jenkins.war
+--------------------------------------------------------------------
+D:
+cd \apache-jmeter-5.4\bin
+jmeter -n -t D:\PerformanceTesting\OHRM_TestPlan.jmx -l D:\PerformanceTesting\TestResults\testresults.xml -e -o D:\PerformanceTesting\HTMLResults\htmlresults.html
+--------------------------------------------------------------------
